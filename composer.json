@@ -1,0 +1,29 @@
+{
+    "name": "vbb/test",
+    "description": "Тестовое задание",
+    "type": "library",
+    "license": "MIT License",
+    "authors": [
+        {
+            "name": "Viktor",
+            "email": "viktor.bryntsev@gmail.com"
+        }
+    ],
+
+    "repositories": [{
+            "type": "path",
+            "url": "/home/saintxak/www/cli/saintxak-parser"
+        }
+    ],
+
+    "require": {
+        "saintxak/parser": "dev-master"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "test\\commands\\": "commands",
+            "test\\elements\\": "elements"
+        }
+    }
+}
