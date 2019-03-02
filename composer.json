@@ -11,13 +11,13 @@
     ],
 
     "repositories": [{
-            "type": "path",
-            "url": "/home/saintxak/www/cli/saintxak-parser"
+            "type": "vcs",
+            "url": "https://github.com/saintxak/netpeakTestLib.git"
         }
     ],
 
     "require": {
-        "saintxak/parser": "dev-master"
+        "saintxak/netpeakTestLib": "dev-master"
     },
 
     "autoload": {

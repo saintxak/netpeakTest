@@ -6,6 +6,7 @@ use saintxak\commands\CommandException;
 
 use saintxak\filters\ImageFilter;
 use saintxak\WalkerBuilder;
+use saintxak\request\http\CURL;
 
 use test\elements\ImageElement;
 
@@ -16,8 +17,11 @@ class Parser implements ICommand{
     }
 
     public function run(array $args=[]){
-        $walker = WalkerBuilder::buildFromURL($args[0]);
+        $walker = WalkerBuilder::buildHttpWalker($args[0]);
         
+        $curl = new CURL();
+        $walker->getRequest()->setDriver($curl);
+
         $imgFilter = new ImageFilter();
 
         $walker->addFilter($imgFilter);
